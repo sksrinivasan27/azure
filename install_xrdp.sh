@@ -11,6 +11,8 @@ sudo apt-get install xfce4 -y
 sudo echo xfce4-session >/root/.xsession
 sudo sed -i '/\/etc\/X11\/Xsession/i xfce4-session' /etc/xrdp/startwm.sh
 sudo service xrdp restart
+
+#install docker
 sudo apt-get update
 sudo apt-get install \
     apt-transport-https \
@@ -24,6 +26,8 @@ sudo add-apt-repository \
    stable"
 sudo apt-get update
 sudo apt-get install docker-ce -y
+
+#install cloudlens container
 sudo docker pull ixiacom/cloudlens-sandbox-agent
 sudo docker run \
 --name CloudLensEBC \
